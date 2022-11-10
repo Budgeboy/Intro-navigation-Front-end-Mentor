@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+             <div class="logo">
+                <a href=""><img src="logo.svg" alt=""></a>
+             </div>
+             <div class="nav-links">
+                <div class="sidebar-logo">
+                    <i class="bi bi-x"></i>
+                </div>
+             <ul class="links">
+                <li><a href="">Features</a>
+                <img src="icon-arrow-up.svg" class="arrow htmlcss-arrow" alt="">
+                <ul class="htmlcss-sub-menu sub-menu">
+                    <li><a href=""><img src="icon-todo.svg" alt="">Todo List</a></li>
+                    <li><a href=""><img src="icon-calendar.svg" alt="">Calendar</a></li>
+                    <li><a href=""><img src="icon-reminders.svg" alt="">Reminders</a></li>
+                    <li><a href=""><img src="icon-planning.svg" alt="">Planning</a></li>
+                </ul>
+                </li>
+                <li><a href="">Company</a>
+                <img src="icon-arrow-up.svg" class="arrow js-arrow" alt="">
+                <ul class="js-sub-menu sub-menu">
+                    <li><a href="">History</a></li>
+                    <li><a href="">Our Team</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+                </li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">About</a></li>
+             </ul>
+             <div class="search-box">
+                <ul>
+                <li><a href="">Login</a></li>
+                <li><a href="" class="btn">Register</a></li>
+                </ul>
+            </div>
+            </div> 
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="hero">
+            <div class="first-section">
+                <h1>Make <br> remote work</h1>
+                <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p><br>
+                <div class="button">
+                <a href="#" class="btn">Learn more</a></div>
+                <div class="brands">
+                    <img src="client-databiz.svg" alt="" class="brand-logo">
+                    <img src="client-audiophile.svg" alt="" class="brand-logo">
+                    <img src="client-meet.svg" alt="" class="brand-logo">
+                    <img src="client-maker.svg" alt="" class="brand-logo">
+                </div>
+            </div>
+            <div class="second-section">
+                <img src="image-hero-desktop.png" alt="" class="hero-img">
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+     let navbar = document.querySelector(".navbar");
+
+    
+    let menuopenBtn = document.querySelector(".navbar .bi-list");
+    let menuCloseBtn = document.querySelector(".nav-links .bi-x");
+    let navLinks = document.querySelector(".nav-links");
+
+    menuopenBtn.addEventListener("click", ()=>{
+        navLinks.style.right="0";
+    });
+    menuCloseBtn.addEventListener("click", ()=>{
+        navLinks.style.right="-100%";
+    });
+
+    let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+    htmlcssArrow.addEventListener("click", ()=>{
+        navLinks.classList.toggle("show1");
+    });
+    let moreArrow = document.querySelector(".more-arrow");
+    moreArrow.addEventListener("click", ()=>{
+        navLinks.classList.toggle("show2");
+    });
+    let jsArrow = document.querySelector(".js-arrow");
+    jsArrow.addEventListener("click", ()=>{
+        navLinks.classList.toggle("show3");
+    });
+</script>
+    </script>
+</body>
+</html>
